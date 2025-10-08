@@ -50,9 +50,10 @@
   color: var(--white);
 }
 
-.logoIcon {
-  font-size: 2.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+.logoImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logoText {
@@ -60,6 +61,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .tagline {
@@ -67,6 +69,7 @@
   line-height: 1.7;
   font-size: 1.1rem;
   max-width: 300px;
+  margin: 0;
 }
 
 .socialLinks {
@@ -86,6 +89,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }
 
 .socialLink:hover {
@@ -98,17 +102,18 @@
   width: 20px;
   height: 20px;
   display: block;
+  color: var(--white);
 }
 
-
 .socialLink:hover svg {
-  opacity: 1;
+  color: var(--primary-green);
 }
 
 .links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  align-items: start;
 }
 
 .linkGroup {
@@ -119,7 +124,7 @@
 
 .linkGroup h4 {
   color: var(--accent-gold);
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 600;
   position: relative;
@@ -144,6 +149,7 @@
   position: relative;
   padding-left: 0;
   font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .linkGroup a::before {
@@ -172,12 +178,19 @@
   gap: 0.75rem;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
 }
 
 .contactIcon {
   font-size: 1.1rem;
   margin-top: 0.1rem;
   flex-shrink: 0;
+  width: 20px;
+  text-align: center;
 }
 
 .contactItem a {
@@ -195,25 +208,32 @@
   font-style: normal;
   line-height: 1.5;
   margin: 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .newsletter {
   background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.newsletterContent {
+  max-width: 600px;
+}
+
 .newsletter h4 {
   color: var(--accent-gold);
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .newsletter > p {
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
 }
 
 .newsletterForm {
@@ -231,6 +251,7 @@
   color: var(--white);
   font-size: 1rem;
   transition: all 0.3s ease;
+  min-width: 0;
 }
 
 .newsletterInput::placeholder {
@@ -241,6 +262,7 @@
   outline: none;
   border-color: var(--accent-gold);
   background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.1);
 }
 
 .newsletterButton {
@@ -253,6 +275,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  font-size: 1rem;
 }
 
 .newsletterButton:hover {
@@ -271,19 +294,19 @@
   font-size: 0.9rem;
 }
 
-.legal {
+.legalLinks {
   display: flex;
   gap: 2rem;
 }
 
-.legal a {
+.legalLinks a {
   color: rgba(255, 255, 255, 0.6);
   transition: color 0.3s ease;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
-.legal a:hover {
+.legalLinks a:hover {
   color: var(--accent-gold);
 }
 
@@ -322,6 +345,10 @@
     gap: 0.875rem;
   }
   
+  .newsletter {
+    padding: 2rem;
+  }
+  
   .newsletterForm {
     flex-direction: column;
   }
@@ -332,7 +359,7 @@
     text-align: center;
   }
   
-  .legal {
+  .legalLinks {
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -346,61 +373,43 @@
   
   .container {
     padding: 0 1rem;
+    gap: 2rem;
   }
   
   .logo {
     font-size: 1.5rem;
   }
   
-  .logoIcon {
-    font-size: 2rem;
+  .logoImage {
+    height: 35px;
   }
   
   .socialLinks {
     gap: 0.5rem;
   }
   
-.socialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+  .socialLink {
+    width: 40px;
+    height: 40px;
+  }
   
   .newsletter {
     padding: 1.5rem;
   }
   
-  .legal {
+  .legalLinks {
     gap: 1rem;
   }
   
-  .legal a {
+  .legalLinks a {
     font-size: 0.85rem;
   }
 }
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 1rem;
-}
 
-.logoImage {
-  height: 40px; /* Adjust based on your logo's aspect ratio */
-  width: auto;
-  margin-right: 10px;
+/* Ensure proper CSS variables are defined */
+:root {
+  --primary-green: #2e7d32;
+  --accent-gold: #ffc107;
+  --white: #ffffff;
+  --font-secondary: 'Georgia', serif;
 }
-
-.logoText {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-/* Remove or comment out the old logo icon styles */
-/*
-.logoIcon {
-  margin-right: 8px;
-}
-*/

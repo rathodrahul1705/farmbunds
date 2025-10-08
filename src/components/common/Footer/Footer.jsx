@@ -77,19 +77,18 @@ const Footer = () => {
               <Link to="/about">About Us</Link>
               <Link to="/products">Products</Link>
               <Link to="/contact">Contact</Link>
-              <Link to="/blog">Blog</Link>
             </div>
 
             <div className={styles.linkGroup}>
-              <h4>Products</h4>
-              <Link to="/products/vegetables">Fresh Vegetables</Link>
-              <Link to="/products/fruits">Organic Fruits</Link>
-              <Link to="/products/dairy">Dairy Products</Link>
-              <Link to="/products/bundles">Farm Bundles</Link>
-              <Link to="/products/seasonal">Seasonal Specials</Link>
+              <h4>Legal</h4>
+              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/terms">Terms of Service</Link>
+              <Link to="/shipping">Shipping Policy</Link>
+              <Link to="/refunds">Refund Policy</Link>
             </div>
 
-            <div className={styles.linkGroup}>
+
+          <div className={styles.linkGroup}>
               <h4>Contact Info</h4>
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📧</span>
@@ -109,25 +108,28 @@ const Footer = () => {
                 </address>
               </div>
             </div>
+
           </div>
         </div>
 
         <div className={styles.newsletter}>
-          <h4>Subscribe to Our Newsletter</h4>
-          <p>Get updates on fresh harvests, seasonal offers, and farming tips</p>
-          <div className={styles.newsletterForm}>
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              className={styles.newsletterInput}
-            />
-            <button className={styles.newsletterButton}>Subscribe</button>
+          <div className={styles.newsletterContent}>
+            <h4>Subscribe to Our Newsletter</h4>
+            <p>Get updates on fresh harvests, seasonal offers, and farming tips</p>
+            <div className={styles.newsletterForm}>
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className={styles.newsletterInput}
+              />
+              <button className={styles.newsletterButton}>Subscribe</button>
+            </div>
           </div>
         </div>
 
         <div className={styles.bottom}>
           <p>&copy; {currentYear} FarmBunds International. All rights reserved.</p>
-          <div className={styles.legal}>
+          <div className={styles.legalLinks}>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
             <Link to="/shipping">Shipping Policy</Link>
