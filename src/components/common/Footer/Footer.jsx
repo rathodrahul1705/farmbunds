@@ -112,21 +112,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className={styles.newsletter}>
-          <div className={styles.newsletterContent}>
-            <h4>Subscribe to Our Newsletter</h4>
-            <p>Get updates on fresh harvests, seasonal offers, and farming tips</p>
-            <div className={styles.newsletterForm}>
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className={styles.newsletterInput}
-              />
-              <button className={styles.newsletterButton}>Subscribe</button>
-            </div>
-          </div>
-        </div>
-
         <div className={styles.bottom}>
           <p>&copy; {currentYear} FarmBunds International. All rights reserved.</p>
           <div className={styles.legalLinks}>
