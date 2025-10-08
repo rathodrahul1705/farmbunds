@@ -11,7 +11,11 @@ const Footer = () => {
         <div className={styles.mainContent}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoIcon}>🌱</span>
+              <img 
+                src="/farmbunds_logo.png" 
+                alt="FarmBunds Logo" 
+                className={styles.logoImage}
+              />
               <span className={styles.logoText}>FarmBunds</span>
             </div>
             <p className={styles.tagline}>
@@ -122,7 +126,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; {currentYear} FarmBunds. All rights reserved.</p>
+          <p>&copy; {currentYear} FarmBunds International. All rights reserved.</p>
           <div className={styles.legal}>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>

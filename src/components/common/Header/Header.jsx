@@ -20,7 +20,11 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <span className={styles.logoIcon}>🌱</span>
+          <img 
+            src="/farmbunds_logo.png" 
+            alt="FarmBunds Logo" 
+            className={styles.logoImage}
+          />
           <span className={styles.logoText}>FarmBunds</span>
         </Link>
         

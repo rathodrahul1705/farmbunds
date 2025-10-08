@@ -2,8 +2,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--light-beige) 0%, rgba(245, 245, 220, 0.8) 100%),
-              url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+  background: linear-gradient(135deg, var(--light-beige) 0%, rgba(245, 245, 220, 0.8) 100%);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

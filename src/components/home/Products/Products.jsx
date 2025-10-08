@@ -21,11 +21,12 @@ const Products = () => {
       price: '$12.99',
       image: '🌾',
       category: 'grains and millets',
+      categorySlug: 'grains-millets',
       availability: 'In Stock',
       minOrder: '5kg',
       deliveryTime: '2-3 days',
-      contactEmail: 'grains@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 2,
@@ -34,11 +35,12 @@ const Products = () => {
       price: '$8.99',
       image: '🟨',
       category: 'spices',
+      categorySlug: 'spices',
       availability: 'In Stock',
       minOrder: '1kg',
       deliveryTime: '1-2 days',
-      contactEmail: 'spices@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 3,
@@ -47,11 +49,12 @@ const Products = () => {
       price: '$6.99',
       image: '🟠',
       category: 'pulses',
+      categorySlug: 'pulses',
       availability: 'Limited Stock',
       minOrder: '2kg',
       deliveryTime: '2-3 days',
-      contactEmail: 'pulses@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 4,
@@ -60,11 +63,12 @@ const Products = () => {
       price: '$5.99',
       image: '🫓',
       category: 'flours',
+      categorySlug: 'flours',
       availability: 'In Stock',
       minOrder: '5kg',
       deliveryTime: '1-2 days',
-      contactEmail: 'flours@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 5,
@@ -73,11 +77,12 @@ const Products = () => {
       price: '$15.99',
       image: '🥦',
       category: 'fruits and vegetables',
+      categorySlug: 'fruits-vegetables',
       availability: 'In Stock',
       minOrder: '1 bundle',
       deliveryTime: 'Same day',
-      contactEmail: 'produce@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 6,
@@ -86,11 +91,12 @@ const Products = () => {
       price: '$9.99',
       image: '🪔',
       category: 'religious products',
+      categorySlug: 'religious-products',
       availability: 'In Stock',
       minOrder: '50 units',
       deliveryTime: '3-4 days',
-      contactEmail: 'religious@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 7,
@@ -99,11 +105,12 @@ const Products = () => {
       price: '$7.99',
       image: '🍝',
       category: 'processed food',
+      categorySlug: 'processed-food',
       availability: 'In Stock',
       minOrder: '10 packs',
       deliveryTime: '2-3 days',
-      contactEmail: 'processed@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 8,
@@ -112,11 +119,12 @@ const Products = () => {
       price: '$18.99',
       image: '🧈',
       category: 'milk products',
+      categorySlug: 'milk-products',
       availability: 'Limited Stock',
       minOrder: '1kg',
       deliveryTime: '1-2 days',
-      contactEmail: 'dairy@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 9,
@@ -125,11 +133,12 @@ const Products = () => {
       price: '$10.99',
       image: '🟤',
       category: 'jaggery products',
+      categorySlug: 'jaggery-products',
       availability: 'In Stock',
       minOrder: '2kg',
       deliveryTime: '2-3 days',
-      contactEmail: 'jaggery@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 10,
@@ -138,11 +147,12 @@ const Products = () => {
       price: '$14.99',
       image: '🥥',
       category: 'oil product',
+      categorySlug: 'oil-products',
       availability: 'In Stock',
       minOrder: '1 liter',
       deliveryTime: '2-3 days',
-      contactEmail: 'oils@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     },
     {
       id: 11,
@@ -151,11 +161,12 @@ const Products = () => {
       price: '$11.99',
       image: '🥭',
       category: 'dehydrated products',
+      categorySlug: 'dehydrated-products',
       availability: 'Out of Stock',
       minOrder: '500g',
       deliveryTime: '4-5 days',
-      contactEmail: 'dehydrated@farmfresh.com',
-      phone: '+1 (555) 123-4567'
+      contactEmail: 'connect@farmbunds.com',
+      phone: '+91 (987) 016-1484'
     }
   ];
 
@@ -211,7 +222,14 @@ const Products = () => {
             <div key={product.id} className={styles['product-home__item']}>
               <div className={styles['product-home__image']}>
                 <span className={styles['product-home__icon']}>{product.image}</span>
-                <div className={styles['product-home__category']}>{product.category}</div>
+                <Link 
+                  to={`/products`}
+                  className={styles['product-home__category-link']}
+                >
+                  <div className={styles['product-home__category']}>
+                    {product.category}
+                  </div>
+                </Link>
               </div>
               
               <div className={styles['product-home__content']}>
@@ -261,7 +279,13 @@ const Products = () => {
                         <strong>Price:</strong> {selectedProduct.price}
                       </div>
                       <div className={styles['product-home__meta-item']}>
-                        <strong>Category:</strong> {selectedProduct.category}
+                        <strong>Category:</strong> 
+                        <Link 
+                          to={`/products?category=${selectedProduct.categorySlug}`}
+                          className={styles['product-home__category-link-modal']}
+                        >
+                          {selectedProduct.category}
+                        </Link>
                       </div>
                       <div className={styles['product-home__meta-item']}>
                         <strong>Availability:</strong> 

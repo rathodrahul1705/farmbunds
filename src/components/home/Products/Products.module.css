@@ -656,3 +656,29 @@
     padding-top: 1.5rem;
   }
 }
+
+/* Add these styles to your existing CSS file */
+
+.product-home__category-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.product-home__category-link:hover {
+  text-decoration: underline;
+  color: #2c5aa0;
+}
+
+.product-home__category-link-modal {
+  text-decoration: none;
+  color: #2c5aa0;
+  font-weight: 500;
+  margin-left: 4px;
+  transition: all 0.3s ease;
+}
+
+.product-home__category-link-modal:hover {
+  text-decoration: underline;
+  color: #1e3a8a;
+}

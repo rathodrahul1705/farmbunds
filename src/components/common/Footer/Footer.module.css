@@ -379,3 +379,28 @@
     font-size: 0.85rem;
   }
 }
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+.logoImage {
+  height: 40px; /* Adjust based on your logo's aspect ratio */
+  width: auto;
+  margin-right: 10px;
+}
+
+.logoText {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Remove or comment out the old logo icon styles */
+/*
+.logoIcon {
+  margin-right: 8px;
+}
+*/

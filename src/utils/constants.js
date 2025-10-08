@@ -1,8 +1,8 @@
 export const SITE_INFO = {
   name: 'FarmBunds',
-  email: 'hello@farmbunds.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Farm Road, Countryside, CO 12345'
+  email: 'connect@farmbunds.com',
+  phone: '+91 (987) 016-1484',
+  address: "Destiny Heights Chs Ltd 6C 2201 New PMGP Colony Gavhanpada Mulund East Mumbai 400081"
 };
 
 export const SOCIAL_LINKS = {

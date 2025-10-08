@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Features.module.css';
 
 const Features = () => {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: '🌱',
@@ -26,18 +29,29 @@ const Features = () => {
   ];
 
   const productCategories = [
-    'Grains and Millets',
-    'Spices',
-    'Pulses',
-    'Flours',
-    'Fruits and Vegetables',
-    'Religious Products',
-    'Processed Food',
-    'Milk Products',
-    'Jaggery Products',
-    'Oil Products',
-    'Dehydrated Products'
+    { name: 'Grains and Millets', slug: 'grains-millets' },
+    { name: 'Spices', slug: 'spices' },
+    { name: 'Pulses', slug: 'pulses' },
+    { name: 'Flours', slug: 'flours' },
+    { name: 'Fruits and Vegetables', slug: 'fruits-vegetables' },
+    { name: 'Religious Products', slug: 'religious-products' },
+    { name: 'Processed Food', slug: 'processed-food' },
+    { name: 'Milk Products', slug: 'milk-products' },
+    { name: 'Jaggery Products', slug: 'jaggery-products' },
+    { name: 'Oil Products', slug: 'oil-products' },
+    { name: 'Dehydrated Products', slug: 'dehydrated-products' }
   ];
+
+  const handleCategoryClick = (categorySlug) => {
+    // Navigate to products page with category filter
+    navigate(`/products?category=${categorySlug}`);
+    
+    // Alternative: If you want a dedicated category page
+    // navigate(`/categories/${categorySlug}`);
+    
+    // Alternative: If you want to pass state
+    // navigate('/products', { state: { category: categorySlug } });
+  };
 
   return (
     <section className={`section section-light ${styles.features}`}>
@@ -65,9 +79,20 @@ const Features = () => {
           </div>
           <div className={styles.categoriesGrid}>
             {productCategories.map((category, index) => (
-              <div key={index} className={styles.categoryCard}>
+              <div 
+                key={index} 
+                className={styles.categoryCard}
+                onClick={() => handleCategoryClick(category.slug)}
+                role="button"
+                tabIndex={0}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handleCategoryClick(category.slug);
+                  }
+                }}
+              >
                 <div className={styles.categoryContent}>
-                  <h3>{category}</h3>
+                  <h3>{category.name}</h3>
                   <span className={styles.arrow}>→</span>
                 </div>
               </div>
